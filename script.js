@@ -48,12 +48,26 @@ const attackingStrategies = [
     "<strong>Butler, PA</strong>: The lowest score on the team is appointed as 'President' and must not die under any circumstances. If he does die, however, the rest of the team must surrender the round to the defenders."
 ];
 
-document.getElementById('defendingButton').addEventListener('click', () => {
-    const randomIndex = Math.floor(Math.random() * defendingStrategies.length);
-    document.getElementById('output').innerHTML = defendingStrategies[randomIndex];
+document.getElementById('defend-btn').addEventListener('click', function() {
+    // Display the strategy text for defending
+    document.getElementById('strategy-text').textContent = getDefendingStrategy();
+    document.getElementById('strategy-text').style.display = 'block'; // Show the strategy text
 });
 
-document.getElementById('attackingButton').addEventListener('click', () => {
-    const randomIndex = Math.floor(Math.random() * attackingStrategies.length);
-    document.getElementById('output').innerHTML = attackingStrategies[randomIndex];
+document.getElementById('attack-btn').addEventListener('click', function() {
+    // Display the strategy text for attacking
+    document.getElementById('strategy-text').textContent = getAttackingStrategy();
+    document.getElementById('strategy-text').style.display = 'block'; // Show the strategy text
 });
+
+// Example functions, replace with actual strategy selection logic
+function getDefendingStrategy() {
+    // Your logic to get a defending strategy
+    return "Example defending strategy.";
+}
+
+function getAttackingStrategy() {
+    // Your logic to get an attacking strategy
+    return "Example attacking strategy.";
+}
+
