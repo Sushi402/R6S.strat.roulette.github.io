@@ -6,7 +6,7 @@ body {
     background-repeat: no-repeat; /* Prevents the image from repeating */
     margin: 0; /* Removes default margin */
     padding: 0; /* Removes default padding */
-    font-family: Arial, sans-serif; /* Sets a default font */
+    font-family: Verdana, sans-serif; /* Sets a default font */
 }
 
 /* Container styling (if needed) */
