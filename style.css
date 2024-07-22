@@ -1,33 +1,45 @@
+/* Set the background image and style */
 body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-image: url('https://imgur.com/gallery/bingus-yuh-4BerrOi');
+    background-image: url('assets/images/background.jpg'); /* Path to your background image */
     background-size: cover; /* Ensures the image covers the entire screen */
     background-position: center; /* Centers the image */
     background-repeat: no-repeat; /* Prevents the image from repeating */
-    margin: 0; /* Optional: Removes default margin */
-    padding: 0; /* Optional: Removes default padding */
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+    font-family: Arial, sans-serif; /* Sets a default font */
 }
 
-.container {
-    text-align: center;
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+/* Container styling (if needed) */
+#container {
+    text-align: center; /* Centers the content inside the container */
+    padding: 20px; /* Adds some padding around the content */
 }
 
+/* Button styling */
 button {
-    padding: 10px 20px;
-    font-size: 16px;
-    margin: 10px;
-    cursor: pointer;
+    background-color: #007bff; /* Primary button color */
+    color: white; /* Text color */
+    border: none; /* Removes the default border */
+    border-radius: 8px; /* Slightly rounded corners */
+    padding: 10px 20px; /* Adds padding inside the button */
+    font-size: 16px; /* Sets the font size */
+    cursor: pointer; /* Changes cursor to a pointer on hover */
+    margin: 10px; /* Adds space around the button */
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.2s; /* Smooth transitions for background color, shadow, and transform */
 }
 
-p {
-    font-size: 18px;
-    margin-top: 20px;
+/* Hover effect */
+button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.6); /* Adds a small glow effect around the button */
+}
+
+/* Click animation */
+button:active {
+    transform: scale(0.95); /* Slightly scales down the button */
+}
+
+/* Focus styling */
+button:focus {
+    outline: none; /* Removes the default focus outline */
 }
