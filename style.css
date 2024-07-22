@@ -1,18 +1,21 @@
 /* Set the background image and style */
 body {
-    background-image: url('https://imgur.com/gallery/bingus-yuh-4BerrOi'); /* Path to your background image */
+    background-image: url('https://imgur.com/gallery/bingus-yuh-4BerrOi'); /* Background image URL */
     background-size: cover; /* Ensures the image covers the entire screen */
     background-position: center; /* Centers the image */
     background-repeat: no-repeat; /* Prevents the image from repeating */
     margin: 0; /* Removes default margin */
     padding: 0; /* Removes default padding */
-    font-family: Verdana, sans-serif; /* Sets a default font */
+    font-family: Verdana, sans-serif; /* Set font to Verdana */
+    display: flex; /* Uses flexbox for centering */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    height: 100vh; /* Full viewport height */
 }
 
 /* Container styling (if needed) */
 #container {
-    text-align: center; /* Centers the content inside the container */
-    padding: 20px; /* Adds some padding around the content */
+    text-align: center; /* Centers the text inside the container */
 }
 
 /* Button styling */
