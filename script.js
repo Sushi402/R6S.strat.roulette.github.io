@@ -60,5 +60,4 @@ document.getElementById('attacker-btn').addEventListener('click', () => {
 
 document.getElementById('defender-btn').addEventListener('click', () => {
     const strat = getRandomStrat(defenderStrategies);
-    document.getElementById('strat-display').innerHTML = strat;
-});
+    document.getElementById('strat-display').inner
