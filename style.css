@@ -1,67 +1,72 @@
-/* Ensure the body and container fill the viewport */
 body {
-    background-image: url('https://imgur.com/gallery/bingus-yuh-4BerrOi');
+    font-family: 'Verdana', sans-serif;
+    background-image: url('https://i.imgur.com/aVrOVAB.jpeg');
     background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin: 0;
-    padding: 0;
-    font-family: Verdana, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    margin: 0;
+    overflow: hidden;
 }
 
-#container {
+.container {
     text-align: center;
-    position: relative; /* Allows absolute positioning of strategy text */
 }
 
-/* Title styling */
-h1 {
-    margin-bottom: 20px; /* Space below the title */
-}
-
-/* Button styling */
-button {
-    background-color: #007bff;
+.title {
+    font-size: 3em;
     color: white;
-    border: none;
-    border-radius: 8px;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.strat-button {
+    display: inline-block;
+    padding: 15px 30px;
     margin: 10px;
-    transition: background-color 0.3s, box-shadow 0.3s, transform 0.2s;
-}
-
-button:hover {
-    background-color: #0056b3;
-    box-shadow: 0 0 10px rgba(0, 123, 255, 0.6);
-}
-
-button:active {
-    transform: scale(0.95);
-}
-
-button:focus {
-    outline: none;
-}
-
-/* Strategy text prompt styling */
-#strategy-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.7); /* Black background with transparency */
+    font-size: 1.2em;
+    border-radius: 10px;
+    border: 2px solid;
     color: white;
-    border-radius: 15px; /* Rounded corners */
+    background-color: rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.attacker {
+    border-color: #f58b32;
+}
+
+.defender {
+    border-color: #1a89da;
+}
+
+.attacker:hover {
+    box-shadow: 0 0 20px #f58b32;
+}
+
+.defender:hover {
+    box-shadow: 0 0 20px #1a89da;
+}
+
+.strat-output {
+    margin-top: 20px;
     padding: 20px;
-    width: 80%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-size: 1.2em;
+    border-radius: 10px;
     max-width: 600px;
-    text-align: center;
-    display: none; /* Hidden by default */
-    z-index: 1000; /* Ensures it appears above other elements */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@keyframes click-animation {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.9); }
+    100% { transform: scale(1); }
+}
+
+.strat-button:active {
+    animation: click-animation 0.2s;
 }
