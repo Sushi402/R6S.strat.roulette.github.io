@@ -1,7 +1,7 @@
-const attackerStrats = [
+const attackerStrategies = [
     "<strong>Yellow Meta:</strong> Only play operators with yellow operator icons.",
     "<strong>The Wall:</strong> Only play operators with shields (Fuze, Montagne, Blitz, etc).",
-    "<strong>Attention:</strong> All attackers must walk in a straight line whenever possible. However, crouching and leaning are all independent of the player.",
+    "<strong>Attention:</strong> All attackers must walk in a straight line whenever possible; however, crouching and leaning are all independent of the player.",
     "<strong>Longest Stick:</strong> All attackers must appoint the player with the highest RP as 'King' and must obey their every command for the duration of the round after killing them at the beginning of the round.",
     "<strong>Phone Phase:</strong> Cannot use or move any drones.",
     "<strong>Pants Ablaze:</strong> Callouts given by teammates are possible lies or possible truths.",
@@ -23,7 +23,7 @@ const attackerStrats = [
     "<strong>Butler, PA:</strong> The lowest score on the team is appointed as 'President' and must not die under any circumstances. If he does die, however, the rest of the team must surrender the round to the defenders."
 ];
 
-const defenderStrats = [
+const defenderStrategies = [
     "<strong>Blue Meta:</strong> Only play operators with blue operator icons.",
     "<strong>Press C:</strong> All players must crouch for the entire round, no proning or standing.",
     "<strong>10 Reinforcements:</strong> No reinforcements can be placed.",
@@ -31,14 +31,14 @@ const defenderStrats = [
     "<strong>Clown Car:</strong> All defenders will place themselves in a single room, all exiting at the same time when an attacker enters the site.",
     "<strong>Testudo:</strong> All players must choose a defender capable of creating cover (Azami walls, deployable shield, etc) and hide in a small spot surrounded by said cover.",
     "<strong>In Headlights:</strong> When you spot an enemy attacker, you cannot move.",
-    "<strong>A Quiet Place:</strong> No words can be spoken for the duration of the round.",
+    "<strong>A Quiet Place:</strong> No words can be spoken during the round.",
     "<strong>Delulu:</strong> Reinforce the incorrect bomb site as if it were the real site.",
     "<strong>Mannequins:</strong> Once the prep phase ends, select a spot to put yourself in for the entirety of the round, only moving after you’ve killed an opponent.",
     "<strong>Counter-Strike:</strong> All players are unable to aim down sights.",
     "<strong>The Floor is Lava:</strong> You can only shoot or kill from atop a surface off the floor like a table or countertop.",
     "<strong>Death From Afar:</strong> Open up as many lines of sight into the site as possible, all attackers moving to a place outside the site and shooting from a distance.",
     "<strong>The Worm:</strong> Once the prep phase ends, all defenders must remain prone for the entirety of the round.",
-    "<strong>Pricey T-Shirts:</strong> One defender selects Rook with the defending team only allowed armor until after they’ve gotten a kill.",
+    "<strong>Pricey T-Shirts:</strong> One defender selects Rook, with the defending team only allowed armor until after they’ve gotten a kill.",
     "<strong>Karaoke:</strong> The player with the least amount of points chooses a song, and the rest of the team sings along until the round ends.",
     "<strong>Like a Record:</strong> Before you shoot or kill an opponent, you must first spin 360 degrees.",
     "<strong>Calm Down:</strong> No cursing, taunting, or yelling for the duration of the round.",
@@ -48,8 +48,17 @@ const defenderStrats = [
     "<strong>Trusty Sidearm:</strong> All players must play pistols only."
 ];
 
-function generateStrat(type) {
-    const strats = type === 'attacker' ? attackerStrats : defenderStrats;
-    const randomStrat = strats[Math.floor(Math.random() * strats.length)];
-    document.getElementById('strat-output').innerHTML = randomStrat;
+function getRandomStrat(strategies) {
+    const randomIndex = Math.floor(Math.random() * strategies.length);
+    return strategies[randomIndex];
 }
+
+document.getElementById('attacker-btn').addEventListener('click', () => {
+    const strat = getRandomStrat(attackerStrategies);
+    document.getElementById('strat-display').innerHTML = strat;
+});
+
+document.getElementById('defender-btn').addEventListener('click', () => {
+    const strat = getRandomStrat(defenderStrategies);
+    document.getElementById('strat-display').innerHTML = strat;
+});
