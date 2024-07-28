@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Siege Strategy Roulette</title>
+    <title>R6S Strat Roulette</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="container">
-        <h1>Siege Strategy Roulette</h1>
-        <button id="defend-btn">Defending Strategies</button>
-        <button id="attack-btn">Attacking Strategies</button>
-        <div id="strategy-text"></div>
+    <div class="container">
+        <h1 class="title">R6S Strat Roulette</h1>
+        <button class="strat-button attacker" onclick="generateStrat('attacker')">Attacker Strats</button>
+        <button class="strat-button defender" onclick="generateStrat('defender')">Defender Strats</button>
+        <div id="strat-output" class="strat-output"></div>
     </div>
     <script src="script.js"></script>
 </body>
