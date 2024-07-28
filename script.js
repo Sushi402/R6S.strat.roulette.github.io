@@ -1,7 +1,7 @@
 const attackerStrats = [
     "<strong>Yellow Meta</strong> Only play operators with yellow operator icons.",
     "<strong>The Wall</strong> Only play operators with shields (Fuze, Montagne, Blitz, etc).",
-    "<strong>Attention</strong> All attackers must walk in a straight line whenever possible; however, crouching and leaning are independent of the player.",
+    "<strong>Attention</strong> All attackers must walk in a straight line whenever possible; however, crouching and leaning are all independent of the player.",
     "<strong>Longest Stick</strong> All attackers must appoint the player with the highest RP as \"King\" and must obey their every command for the duration of the round after killing them at the beginning of the round.",
     "<strong>Phone Phase</strong> Cannot use or move any drones.",
     "<strong>Pants Ablaze</strong> Callouts given by teammates are possible lies or possible truths.",
