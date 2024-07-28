@@ -1,9 +1,11 @@
 body, html {
     height: 100%;
     margin: 0;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background: url('https://i.imgur.com/aVrOVAB.jpeg') no-repeat center center fixed;
+    font-family: Verdana, sans-serif;
+    background-image: url('https://i.imgur.com/aVrOVAB.jpeg');
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,59 +13,71 @@ body, html {
 
 .container {
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 10px;
 }
 
 h1 {
     color: white;
-    font-size: 3em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
     margin-bottom: 20px;
 }
 
-.button-container {
+.buttons {
     margin-bottom: 20px;
 }
 
-.strat-button {
-    font-size: 1.5em;
-    padding: 10px 20px;
-    margin: 10px;
-    border-radius: 10px;
-    border: 2px solid white;
+button {
+    width: 175px;
+    height: 75px;
+    margin: 0 10px;
+    font-size: 16px;
     cursor: pointer;
+    background-color: white;
+    border: none;
+    border-radius: 10px;
     transition: all 0.3s ease;
-    background-color: rgba(255, 255, 255, 0.3);
 }
 
-#attacker-btn {
-    border-color: #f58b32;
+#attackerBtn {
+    border: 2px solid #f58b32;
 }
 
-#defender-btn {
-    border-color: #1a89da;
+#defenderBtn {
+    border: 2px solid #1a89da;
 }
 
-.strat-button:hover {
-    box-shadow: 0 0 10px 2px white;
+#attackerBtn:hover {
+    box-shadow: 0 0 10px #f58b32;
 }
 
-#attacker-btn:hover {
-    box-shadow: 0 0 10px 2px #f58b32;
+#defenderBtn:hover {
+    box-shadow: 0 0 10px #1a89da;
 }
 
-#defender-btn:hover {
-    box-shadow: 0 0 10px 2px #1a89da;
+button:active {
+    transform: scale(0.95);
 }
 
-.strat-display {
-    margin-top: 20px;
-    padding: 20px;
+.strategy-output {
     background-color: rgba(0, 0, 0, 0.7);
     color: white;
-    font-size: 1.2em;
-    border-radius: 10px;
-    display: inline-block;
-    max-width: 80%;
+    padding: 20px;
+    border-radius: 5px;
+    width: 550px;
+    height: 115px;
+    margin-top: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.strat-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.strat-description {
+    text-align: center;
+    width: 100%;
 }
